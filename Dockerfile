@@ -1,10 +1,12 @@
 # How to use this Dockerfile
 # Build with: docker build --rm -t tribler .
 # 
-# Run the container with: docker run -ti --name="tribler" -p 5901:5901 -v /home/xxx/dockerfiles/tribler-dockerfile/Downloads:/root/Downloads tribler /bin/bash
+#
+# Run the container with: docker run -ti --name triblervnc -p 5901:5901 -v /$HOME/Tribler/Downloads:/root/Downloads -v /$HOME/.Tribler:/root/.Tribler triblervnc /bin/bash
+# Then, from the bash prompt type ./vnc.sh
 # 
-# After quitting the container, it can be re-attached with: docker restart tribler
-#															docker attach tribler
+# After quitting the container, it can be re-attached with: docker restart triblervnc
+# 							    docker attach triblervnc
 #
 # For copy/paste from host: add autocutsel -fork to the xstartup file in /root/.vnc directory.
 # 
